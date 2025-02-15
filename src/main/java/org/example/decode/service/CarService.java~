@@ -1,0 +1,42 @@
+package org.example.decode.service;
+
+import org.example.decode.Repository.CarRepo;
+import org.example.decode.model.Car;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+@Service
+public class CarService {
+
+    @Autowired
+    private CarRepo carRepo;
+
+
+    public List<Car> getAllCars() {
+        return carRepo.findAll();
+    }
+
+
+    public Optional<Car> findby(int id) {
+        return carRepo.findById(id);
+    }
+
+
+    public Car addCar(Car car) {
+        return carRepo.save(car);
+    }
+
+
+
+
+    public boolean deleteCar(int id) {
+        if (carRepo.existsById(id)) {
+            carRepo.deleteById(id);
+            return true;
+        }
+        return false;
+    }
+}

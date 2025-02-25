@@ -26,7 +26,7 @@ src/
 ## ⚙️ Installation & Setup
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo-url.git
+   git clone https://github.com/TornovDutta/Motor-Insurance-Part-Mapping-and-Recommendation.git
    ```
 2. Navigate to the project directory:
    ```sh
